@@ -10,6 +10,14 @@ def encode(string):
     return newStr
 
 
+def decode(string):
+    newStr = ""
+    #Iterates through characters in string: adds 3, then takes modulo 10
+    for i in string:
+        newStr += str((int(i)-3)%10)
+
+    return newStr
+
 
 #Main Function
 def main():
@@ -19,7 +27,7 @@ def main():
     print("1. Encode")
     print("2. Decode")
     print("3. Quit")
-    choice = None
+    choice = 0
     #Check if user has quit
     while choice != "3":
         #Ask for user input
